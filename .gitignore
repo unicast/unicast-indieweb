@@ -1,0 +1,10 @@
+# OS noise
+.DS_Store
+Thumbs.db
+
+# Python
+__pycache__/
+*.pyc
+
+# If you use a local web server that creates logs
+*.log

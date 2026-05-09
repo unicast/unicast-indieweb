@@ -1,0 +1,231 @@
+{
+  "debug": false,
+  "textures": {
+    "floor": "assets/floor.png",
+    "wall": "assets/wall.png"
+  },
+  "settings": {
+    "interaction": {
+      "radiusMultiplier": 0,
+      "radiusBase": 50,
+      "wallObjectBoost": 10
+    },
+    "rendering": {
+      "showShadows": false
+    }
+  },
+  "rooms": [
+    {
+      "name": "DIY Workshop",
+      "x": 0,
+      "y": 250,
+      "color": "#5e4f42",
+      "textures": {
+        "floor": "assets/floor_workshop.png"
+      },
+      "objects": [
+        {
+          "name": "Industrial Workbench",
+          "x": 125,
+          "y": 200,
+          "interactable": true,
+          "contentFile": "content/workshop.md",
+          "image": "assets/workbench.png",
+          "height": 180
+        }
+      ]
+    },
+    {
+      "name": "Gym",
+      "x": 250,
+      "y": 250,
+      "color": "#424a5e",
+      "textures": {
+        "floor": "assets/floor_workshop.png"
+      },
+      "objects": [
+        {
+          "name": "Swedish Ladder",
+          "wall": "NE",
+          "x": 100,
+          "y": 200,
+          "z": 110,
+          "interactable": false,
+          "image": "assets/swedish_ladder.png",
+          "height": 180
+        },
+        {
+          "name": "Stationary Bike",
+          "x": 220,
+          "y": 150,
+          "interactable": true,
+          "contentFile": "content/bike.md",
+          "image": "assets/bike.png",
+          "height": 140
+        }
+      ],
+      "wallObjects": [
+        {
+          "name": "Workshop Door",
+          "wall": "NW",
+          "x": 0,
+          "y": 200,
+          "z": 60,
+          "image": "assets/door.png",
+          "width": 80,
+          "height": 160
+        }
+      ]
+    },
+    {
+      "name": "Garage",
+      "x": 0,
+      "y": 0,
+      "textures": {
+        "floor": "assets/floor_garage.png"
+      },
+      "color": "#425e4c",
+      "objects": [
+        {
+          "name": "R170 Roadster",
+          "x": 100,
+          "y": 80,
+          "interactable": true,
+          "contentFile": "content/r170.md",
+          "image": "assets/r170.png",
+          "height": 140
+        }
+      ],
+      "wallObjects": [
+        {
+          "name": "Workshop Door",
+          "wall": "NE",
+          "x": 120,
+          "y": 250,
+          "z": 60,
+          "image": "assets/door.png",
+          "width": 80,
+          "height": 160
+        }
+      ]
+    },
+    {
+      "name": "Music Studio",
+      "x": 250,
+      "y": 0,
+      "color": "#5e425e",
+      "objects": [
+        {
+          "name": "Recording Console",
+          "x": 160,
+          "y": 20,
+          "interactable": true,
+          "contentFile": "content/music_desk.md",
+          "image": "assets/music_desk.png",
+          "height": 160
+        }
+      ],
+      "wallObjects": [
+        {
+          "name": "Pace of Mind Sign",
+          "wall": "NE",
+          "x": 125,
+          "y": 250,
+          "z": 80,
+          "interactable": true,
+          "contentFile": "content/pace_of_mind.md",
+          "image": "assets/pace_of_mind.png",
+          "width": 150,
+          "height": 150
+        },
+        {
+          "name": "Garage Door",
+          "wall": "NW",
+          "x": 0,
+          "y": 160,
+          "z": 60,
+          "image": "assets/door.png",
+          "width": 80,
+          "height": 160
+        },
+        {
+          "name": "Golden Master Holotape",
+          "wall": "NW",
+          "x": 60,
+          "y": 70,
+          "z": 80,
+          "interactable": false,
+          "image": "assets/holotape.png",
+          "height": 70
+        }
+      ]
+    },
+    {
+      "name": "Living Room",
+      "x": 500,
+      "y": 0,
+      "color": "#5e5a42",
+      "textures": {
+        "floor": "assets/floor_wood.png"
+      },
+      "wallObjects": [
+        {
+          "name": "Heavy Door",
+          "wall": "NW",
+          "x": 0,
+          "y": 160,
+          "z": 60,
+          "interactable": false,
+          "image": "assets/door.png",
+          "width": 80,
+          "height": 160
+        }
+      ],
+      "objects": [
+        {
+          "name": "Bookshelf",
+          "x": 25,
+          "y": 205,
+          "interactable": true,
+          "contentFile": "content/bookshelf.md",
+          "image": "assets/bookshelf.png",
+          "height": 130
+        },
+        {
+          "name": "Dining Table",
+          "x": 200,
+          "y": 30,
+          "interactable": true,
+          "contentFile": "content/dining.md",
+          "image": "assets/dining_table.png",
+          "width": 120,
+          "height": 120
+        },
+        {
+          "name": "Sofa",
+          "x": 70,
+          "y": 20,
+          "interactable": false,
+          "image": "assets/sofa.png",
+          "height": 160
+        },
+        {
+          "name": "Desk",
+          "x": 220,
+          "y": 200,
+          "interactable": true,
+          "contentFile": "content/about.md",
+          "image": "assets/focusdesk.png",
+          "height": 140
+        }
+      ]
+    }
+  ],
+  "player": {
+    "x": 625,
+    "y": 125,
+    "speed": 4,
+    "image": "assets/unicast.png",
+    "height": 145
+  }
+}
