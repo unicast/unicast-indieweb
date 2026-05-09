@@ -8,13 +8,32 @@
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+    <!-- IndieAuth and RelMeAuth -->
+    <link rel="me" href="https://github.com/unicast">
+    <link rel="authorization_endpoint" href="https://indieauth.com/auth">
+    <link rel="token_endpoint" href="https://indieauth.com/token">
 </head>
 
 <body>
     <div id="game-container">
         <canvas id="game-canvas"></canvas>
-
     </div>
+    
+    <footer id="terminal-footer">
+        <div class="h-card">
+            <a class="u-url p-name" rel="me" href="https://unicast.neocities.org/">unicast</a>
+            <span class="p-note">Signal from the Vault.</span>
+        </div>
+        <div class="links">
+            [<a rel="me" href="https://github.com/unicast">GitHub</a>]
+        </div>
+        <div class="webring">
+            [<a href="https://xn--sr8hvo.ws/previous">←</a>]
+            <a href="https://xn--sr8hvo.ws">IndieWeb Webring</a> 🕸💍
+            [<a href="https://xn--sr8hvo.ws/next">→</a>]
+        </div>
+    </footer>
 
     <!-- Modal for Markdown Content -->
     <div id="content-modal" class="hidden">

@@ -136,3 +136,40 @@ canvas {
 .modal-dialog {
     animation: flicker 0.15s infinite;
 }
+
+/* Terminal Footer */
+#terminal-footer {
+    position: absolute;
+    bottom: 15px;
+    left: 20px;
+    font-size: 18px;
+    z-index: 50;
+    pointer-events: auto;
+    text-shadow: 0 0 5px var(--pip-boy-glow);
+}
+
+#terminal-footer .h-card {
+    margin-bottom: 4px;
+}
+
+#terminal-footer a {
+    color: var(--pip-boy-amber);
+    text-decoration: none;
+    border: 1px solid transparent;
+    padding: 0 4px;
+}
+
+#terminal-footer a:hover {
+    background: var(--pip-boy-amber);
+    color: var(--pip-boy-bg);
+}
+
+#terminal-footer .p-note {
+    opacity: 0.8;
+    margin-left: 10px;
+}
+
+#terminal-footer .webring {
+    margin-top: 4px;
+    font-size: 16px;
+}
