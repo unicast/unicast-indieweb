@@ -1,0 +1,138 @@
+:root {
+    --pip-boy-amber: #ffb000;
+    --pip-boy-bg: #0d0900;
+    --pip-boy-glow: rgba(255, 176, 0, 0.4);
+    --scanline-color: rgba(0, 0, 0, 0.15);
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #050505;
+    font-family: 'VT323', 'Courier New', Courier, monospace;
+    overflow: hidden;
+    color: var(--pip-boy-amber);
+}
+
+#game-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+canvas {
+    image-rendering: pixelated;
+    background-color: #111;
+    border: 4px solid #333;
+}
+
+.hidden {
+    display: none !important;
+}
+
+#content-modal {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0.85);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    backdrop-filter: blur(2px);
+}
+
+.modal-dialog {
+    background: var(--pip-boy-bg);
+    padding: 30px;
+    max-width: 700px;
+    width: 85%;
+    max-height: 80vh;
+    overflow-y: auto;
+    border: 2px solid var(--pip-boy-amber);
+    position: relative;
+    color: var(--pip-boy-amber);
+    box-shadow: 0 0 20px var(--pip-boy-glow);
+    text-shadow: 0 0 5px var(--pip-boy-glow);
+    font-size: 24px;
+    letter-spacing: 1px;
+
+    /* CRT Scanline Effect */
+    background-image: linear-gradient(var(--scanline-color) 50%, transparent 50%);
+    background-size: 100% 4px;
+}
+
+/* Modal Scrollbar */
+.modal-dialog::-webkit-scrollbar {
+    width: 10px;
+}
+.modal-dialog::-webkit-scrollbar-track {
+    background: #1a1500;
+}
+.modal-dialog::-webkit-scrollbar-thumb {
+    background: var(--pip-boy-amber);
+}
+
+#close-modal {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: transparent;
+    color: var(--pip-boy-amber);
+    border: 2px solid var(--pip-boy-amber);
+    font-family: 'VT323', monospace;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 4px 12px;
+    transition: all 0.2s;
+}
+
+#close-modal:hover {
+    background: var(--pip-boy-amber);
+    color: var(--pip-boy-bg);
+    box-shadow: 0 0 10px var(--pip-boy-amber);
+}
+
+#modal-body h1, #modal-body h2 {
+    border-bottom: 2px solid var(--pip-boy-amber);
+    padding-bottom: 5px;
+    margin-top: 0;
+    text-transform: uppercase;
+}
+
+#modal-body a {
+    color: var(--pip-boy-amber);
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+#modal-body a:hover {
+    background: var(--pip-boy-amber);
+    color: var(--pip-boy-bg);
+    text-decoration: none;
+}
+
+#modal-body img {
+    max-width: 100%;
+    border: 2px solid var(--pip-boy-amber);
+    margin: 10px 0;
+    filter: sepia(100%) hue-rotate(5deg) brightness(1.2); /* Make images feel unified with the theme */
+}
+
+/* CRT Animation */
+@keyframes flicker {
+    0% { opacity: 0.97; }
+    5% { opacity: 0.95; }
+    10% { opacity: 0.9; }
+    15% { opacity: 0.95; }
+    20% { opacity: 0.98; }
+    100% { opacity: 1; }
+}
+
+.modal-dialog {
+    animation: flicker 0.15s infinite;
+}
